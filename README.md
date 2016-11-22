@@ -6,13 +6,13 @@
 支持大部分sass、less等特性，例如css变量, mixin等，优点在于以后浏览器全面支持后，可以直接去掉cssnext，而不用改变任何代码。
 
 <h2>Usage</h2>
-1. 必要安装:
+必要安装:
 ```
 $ npm install ness postcss -g
 $ ness --use 
 ```
 
-2. 按需安装:
+按需安装:
 ```
 //按需安装相关postcss插件
 //例如需要custom-properties特性的就安装此插件
@@ -20,14 +20,16 @@ $ ness --use
 $ npm install plugins -g
 ```
 
-3. terminal前往至微信小程序项目的根目录, 使用: 
+terminal前往至微信小程序项目的根目录, 使用: 
 ```
 //首次运行需要设置plugin, 请带参数, 如: ness -u xxx 或 ness --use xxx, 如:
 $ ness --use postcss-custom-properties
 ```
 
-详细参数: 
+详细参数:
+``` 
 ness [--use|-u] plugin
   -u, --use           postcss 插件名称 (可以多个插件一起使用)
   -v, --version       显示版本
   -h, --help          显示帮助
+```
