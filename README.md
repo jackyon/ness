@@ -11,7 +11,7 @@
 <h2>Usage</h2>
 必要安装:
 ```
-$ npm install ness-tool postcss -g
+$ npm install postcss-cli ness-tool postcss -g
 ```
 
 按需安装:

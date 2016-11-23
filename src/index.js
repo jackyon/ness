@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import fs from "fs";
+import path from "path";
 import chokidar from "chokidar";
 import recursive from "recursive-readdir";
 import minimatch from "minimatch";
@@ -30,6 +31,8 @@ const argv = require("yargs")
 	.argv;
 const argvU = argv.u;
 let options, postcssExecPlugin;
+//自动兼容os win的斜杆符号
+const sep = path.sep;
 
 
 /*
@@ -117,10 +120,10 @@ watcher.on('change', (path) => {
  检查是否引用了其它ness
  */
 function generateWxss(filePath) {
-	const pathSplitArray = filePath.split("/"),
+	const pathSplitArray = filePath.split(sep),
 		  targetName = pathSplitArray.pop().split(".")[0],
-		  targetPath = pathSplitArray.slice(0, -1).join("/"),
-		  outputPath = `${targetPath}/${targetName}/${targetName}.wxss`;
+		  targetPath = pathSplitArray.slice(0, -1).join(sep),
+		  outputPath = `${targetPath}${sep}${targetName}${sep}${targetName}.wxss`;
 
 	exec(`${postcssExecPlugin} -o ${outputPath} ${filePath}`, (error, stdout, stderr) => {
 		if (error) {
