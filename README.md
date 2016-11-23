@@ -1,6 +1,9 @@
 <h1>NESS (测试阶段，请勿使用于实际项目)</h1>
 > 在微信小程序中使用cssnext
 
+![alt tag](http://i.imgur.com/XkvxMWx.gif)
+
+
 <h3>为何使用cssnext而不用scss, less?</h3> 
 - 类似于babel, cssnext也是一款转译器, 根据目前仍处于草案阶段、未被浏览器实现的标准把代码转译成符合目前浏览器实现的 CSS。
 支持大部分sass、less等特性，例如css变量, mixin等，优点在于以后浏览器全面支持后，可以直接去掉cssnext，而不用改变任何代码。

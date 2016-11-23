@@ -13,7 +13,7 @@ const argv = require("yargs")
 	.version(() => {
 		return [
 			"版本号",
-			require("./node_modules/ness/package.json").version
+			require("./node_modules/ness-tool/package.json").version
 		].join(" ");
 	})
 	.alias("v", "version")
@@ -23,7 +23,6 @@ const argv = require("yargs")
 	.describe("h", "显示帮助")
 	.check((argv) => {
 		if (!argv.u && getOptions().length === 0) {
-			// console.log("请带参数")
 			throw "首次运行需要设置plugin name, 请带参数, 如: ness -u xxx 或 ness --use xxx";
 		}
 		return true;
