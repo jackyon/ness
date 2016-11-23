@@ -1,5 +1,5 @@
-<h1>NESS (测试阶段，请勿使用于实际项目)</h1>
-> 在微信小程序中使用cssnext
+<h1>NESS</h1>
+> 在微信小程序中使用cssnext,  (测试阶段，或许有bug.)
 
 ![alt tag](http://i.imgur.com/XkvxMWx.gif)
 

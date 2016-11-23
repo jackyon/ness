@@ -11,12 +11,7 @@ const argv = require("yargs")
 	.usage("用法: ness [--use|-u] plugin")
 	.alias("u", "use")
 	.describe("u", "postcss 插件名称 (可以多个插件一起使用)")
-	.version(() => {
-		return [
-			"版本号",
-			require("./node_modules/ness-tool/package.json").version
-		].join(" ");
-	})
+	.version(() => require('../package.json').version)
 	.alias("v", "version")
 	.describe("v", "显示版本")
 	.help("h")
