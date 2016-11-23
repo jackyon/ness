@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import fs from "fs";
 import chokidar from "chokidar";
 import recursive from "recursive-readdir";
@@ -55,9 +56,22 @@ function setOption(param, value) {
  检查是否有多个plugin参数
  */
 function isMultiplePlugin(argv) {
+	const movePostcssImportToFirst = (argv) => {
+		argv.map((plugin, index) => {
+			if (plugin === "postcss-import") {
+				if (index !== 0) {
+					argv.splice(-1, 1);
+					argv.unshift("postcss-import");
+				}
+			}
+		})
+	}
+
+	movePostcssImportToFirst(argv);
+
 	if (Array.isArray(argv)) {
 		let tempString = "postcss";
-		argv.map((plugin) => {
+		argv.map(plugin => {
 			tempString += ` -w -u ${plugin}`
 		})
 		postcssExecPlugin = tempString;

@@ -1,6 +1,6 @@
 {
-  "name": "ness",
-  "version": "0.0.1",
+  "name": "ness-tool",
+  "version": "0.0.2",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf lib",
@@ -9,7 +9,7 @@
   },
   "author": {
     "name": "jackyon",
-    "email": "36582344@qq.com",
+    "email": "jackyon.com@gmail.com",
     "url": "http://www.findjo.com"
   },
   "bin": {

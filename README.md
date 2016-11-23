@@ -8,8 +8,7 @@
 <h2>Usage</h2>
 必要安装:
 ```
-$ npm install ness postcss -g
-$ ness --use 
+$ npm install ness-tool postcss -g
 ```
 
 按需安装:
@@ -23,7 +22,7 @@ $ npm install plugins -g
 terminal前往至微信小程序项目的根目录, 使用: 
 ```
 //首次运行需要设置plugin, 请带参数, 如: ness -u xxx 或 ness --use xxx, 如:
-$ ness --use postcss-custom-properties
+$ ness --use postcss-custom-properties --use postcss-import
 ```
 
 详细参数:
