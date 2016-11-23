@@ -56,27 +56,32 @@ function setOption(param, value) {
  检查是否有多个plugin参数
  */
 function isMultiplePlugin(argv) {
-	const movePostcssImportToFirst = (argv) => {
+	const reOrderPlugins = (argv) => {
 		argv.map((plugin, index) => {
 			if (plugin === "postcss-import") {
 				if (index !== 0) {
-					argv.splice(-1, 1);
+					argv.splice(index, 1);
 					argv.unshift("postcss-import");
+				}
+			} else if(plugin === "postcss-discard-comments") {
+				if (index !== 1) {
+					argv.splice(index, 1);
+					argv.splice(1, 0, "postcss-discard-comments");
 				}
 			}
 		})
 	}
 
-	movePostcssImportToFirst(argv);
+	reOrderPlugins(argv);
 
 	if (Array.isArray(argv)) {
-		let tempString = "postcss";
+		let tempString = "postcss -w";
 		argv.map(plugin => {
-			tempString += ` -w -u ${plugin}`
+			tempString += ` -u ${plugin}`
 		})
 		postcssExecPlugin = tempString;
 	} else {
-		postcssExecPlugin = `postcss -w -u ${argv}`
+		postcssExecPlugin = `postcss -u ${argv}`
 	}
 }
 

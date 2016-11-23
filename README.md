@@ -22,7 +22,7 @@ $ npm install plugins -g
 terminal前往至微信小程序项目的根目录, 使用: 
 ```
 //首次运行需要设置plugin, 请带参数, 如: ness -u xxx 或 ness --use xxx, 如:
-$ ness --use postcss-custom-properties --use postcss-import
+$ ness -u postcss-import -u postcss-discard-comments -u postcss-custom-properties
 ```
 
 详细参数:
@@ -32,3 +32,6 @@ ness [--use|-u] plugin
   -v, --version       显示版本
   -h, --help          显示帮助
 ```
+
+todo:
+- 增加 options 配置参数
