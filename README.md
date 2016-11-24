@@ -6,7 +6,8 @@
 
 <h3>为何使用 cssnext 而不用 scss, less?</h3> 
 - 类似于 babel, cssnext 也是一款转译器, 根据目前仍处于草案阶段、未被浏览器实现的标准把代码转译成符合目前浏览器实现的 CSS。
-支持大部分 sass、less 等特性，例如 css 变量, mixin等，优点在于以后浏览器全面支持后，可以直接去掉 cssnext，而不用改变任何代码。
+支持大部分 sass、less 等特性，例如 css 变量, nest等，优点在于以后浏览器全面支持后，可以直接去掉 cssnext转译器，而不用改变任何代码。
+详细了解cssnext: http://cssnext.io/
 
 <h2>Usage</h2>
 必要安装:
