@@ -104,7 +104,7 @@ watcher.on('change', (path) => {
 		checkImports(path);
 
 		//如果是根目录ness文件，不生成wxss文件
-		if (!path.includes("/")) return;
+		if (!path.includes(sep)) return;
 
 		generateWxss(path);
 	}
