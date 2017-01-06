@@ -22,13 +22,13 @@ $ npm install postcss-cli ness-tool postcss -g
 //例如需要 custom-properties 特性的就安装此插件
 //详细特性列表: http://cssnext.io/features/
 例如:
-$ cnpm i postcss-import postcss-discard-comments postcss-custom-properties postcss-nesting -g
+$ cnpm i postcss-import postcss-discard-comments postcss-custom-properties postcss-nesting -g cssnano -g
 ```
 
 3.terminal前往至微信小程序项目的根目录, 使用: 
 ```
 //首次运行需要设置 plugin , 请带参数, 如: ness -u xxx 或 ness --use xxx, 如:
-$ ness -u postcss-import -u postcss-discard-comments -u postcss-custom-properties -u postcss-nesting
+$ ness -u postcss-import -u postcss-discard-comments -u postcss-custom-properties -u postcss-nesting -u cssnano
 //以后仅需在目录执行 ness 命令即可
 ```
 
